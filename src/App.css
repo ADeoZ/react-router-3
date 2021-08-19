@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -15,6 +16,12 @@
 
 .Toolbar__logo {
   font-size: 22px;
+}
+
+.Toolbar__logo {
+  font-size: 22px;
+  color: #000000;
+  text-decoration: none;
 }
 
 .ToolbarForm>input {
@@ -80,6 +87,11 @@
   margin: 0 auto;
 }
 
+.NewsList__link {
+  text-decoration: none;
+  color: #000000;
+}
+
 .News {
   width: 400px;
   border: 1px solid rgb(195, 195, 196);
@@ -104,4 +116,21 @@
 .News__content {
   font-size: 18px;
   margin: 20px 20px;
+}
+
+.NewsView {
+  display: flex;
+  justify-content: center;
+}
+
+.Page404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.Page404 h2 {
+  font-size: 65px;
 }

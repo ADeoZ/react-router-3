@@ -1,14 +1,19 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import AuthContext from '../contexts/AuthContext';
 import ToolbarForm from "./ToolbarForm";
 import ToolbarProfile from './ToolbarProfile';
 
 export default function Toolbar() {
-  const { profile } = useContext(AuthContext);
+  const { token, profile } = useContext(AuthContext);
+  let homeLink = '/';
+  if (token) {
+    homeLink = '/news';
+  }
 
   return (
     <div className="Toolbar">
-      <div className="Toolbar__logo">Neto Social</div>
+      <Link to={homeLink} className="Toolbar__logo">Neto Social</Link>
       {!profile && <ToolbarForm />}
       {profile && <ToolbarProfile />}
     </div>

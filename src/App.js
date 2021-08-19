@@ -1,11 +1,11 @@
 import './App.css';
 import AuthProvider from './components/AuthProvider';
-import NetoSocial from './components/NetoSocial';
+import RouteWrapper from './components/RouteWrapper';
 
-function App() {
+function App() {    
   return (
     <AuthProvider>
-      <NetoSocial />
+      <RouteWrapper />
     </AuthProvider>
   );
 }
